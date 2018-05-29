@@ -1,6 +1,6 @@
 Summary: gRPC, A high performance, open-source universal RPC framework
 Name: grpc
-Version: 1.11.1
+Version: 1.12.x
 Release: 1%{?dist}
 License: BSD
 URL: http://www.grpc.io/
@@ -80,7 +80,7 @@ make install prefix="%{buildroot}/usr"
 make install-grpc-cli prefix="%{buildroot}/usr"
 %ifarch x86_64
 mkdir -p %{buildroot}/usr/lib64
-mv %{buildroot}/usr/lib/* %{buildroot}/usr/lib64/
+mv %{buildroot}/usr/%{_libdir}* %{buildroot}/usr/lib64/
 %endif
 
 %clean
